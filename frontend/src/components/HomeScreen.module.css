@@ -1,0 +1,260 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--primary);
+  color: #fff;
+  padding: 20px 20px 24px;
+}
+
+.appName {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.greeting {
+  font-size: var(--fs-title);
+  max-width: 720px;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+}
+
+.myCode {
+  max-width: 720px;
+  margin: 8px auto 0;
+  font-size: 18px;
+}
+
+.myCode strong {
+  display: inline-block;
+  margin-left: 6px;
+  background: #fff;
+  color: var(--primary);
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: var(--fs-title);
+  margin-top: 20px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty {
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  color: var(--text-sub);
+  line-height: 1.8;
+}
+
+/* 一覧の行 */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 96px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+}
+
+.row:hover {
+  border-color: var(--primary);
+}
+
+.row:active {
+  background: var(--primary-soft);
+}
+
+.rowUnread {
+  border-color: var(--notice);
+  border-width: 3px;
+}
+
+.rowBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rowTop {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.rowTitle {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-body);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.rowNote {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badgeMention {
+  white-space: nowrap;
+  background: #fff;
+  color: var(--notice);
+  border: 2px solid var(--notice);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 999px;
+  padding: 0 12px;
+}
+
+.badge {
+  white-space: nowrap;
+  align-self: flex-start;
+  background: var(--notice);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 999px;
+  padding: 2px 14px;
+}
+
+.preview {
+  color: var(--text-sub);
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.when {
+  font-size: 16px;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 36px;
+  color: var(--text-sub);
+  line-height: 1;
+}
+
+/* 友達を増やす */
+.addBox {
+  margin-top: 8px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 16px 20px;
+}
+
+.addHelp {
+  color: var(--text-sub);
+  margin: 4px 0 12px;
+}
+
+.addForm {
+  display: flex;
+  gap: 10px;
+}
+
+.addForm input {
+  flex: 1;
+  min-width: 0;
+}
+
+.codeField {
+  font-size: 26px;
+  letter-spacing: 0.1em;
+}
+
+.found {
+  border: 3px solid var(--primary);
+  background: var(--primary-soft);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.foundName {
+  font-size: var(--fs-title);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.foundCode {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.foundActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.foundActions :global(.btn) {
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+.addOk {
+  margin-top: 10px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .addForm {
+    flex-direction: column;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px 32px;
+}

@@ -1,0 +1,26 @@
+.dialog {
+  margin: auto;
+  width: min(480px, calc(100vw - 32px));
+  border: none;
+  border-radius: 18px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 0.35);
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.5);
+}
+
+.message {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}

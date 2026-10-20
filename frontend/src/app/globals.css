@@ -1,0 +1,129 @@
+:root {
+  --primary: #0b7a35; /* 白文字とのコントラスト比 5.4:1 */
+  --primary-dark: #08622a;
+  --primary-soft: #e3f4e8;
+  --bg: #f7f4ee;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --text-sub: #4a4a4a;
+  --border: #b9b4aa;
+  --mine: #d6f2c2;
+  --notice: #c2410c;
+  --notice-soft: #fff1e6;
+  --danger: #b42318;
+  --focus: #1d4ed8;
+
+  --fs-base: 20px;
+  --fs-body: 22px;
+  --fs-title: 26px;
+  --tap: 64px;
+  --radius: 14px;
+  --font: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "BIZ UDPGothic", "Yu Gothic UI", "Meiryo",
+    system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* キーボード操作のときに分かりやすい太い枠 */
+:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* 共通の部品 */
+.btn {
+  min-height: var(--tap);
+  padding: 0 24px;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  font-size: 22px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: var(--surface);
+  border-color: var(--text-sub);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn:disabled {
+  background: #d4d0c8;
+  color: #5a5a5a;
+  cursor: not-allowed;
+}
+
+.field {
+  width: 100%;
+  min-height: var(--tap);
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: var(--fs-body);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px rgb(29 78 216 / 0.25);
+}
+
+.error-text {
+  color: var(--danger);
+  font-weight: 700;
+}

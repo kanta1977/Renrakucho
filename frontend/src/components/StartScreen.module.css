@@ -1,0 +1,128 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+}
+
+.lead {
+  text-align: center;
+  font-size: var(--fs-body);
+  line-height: 1.7;
+}
+
+/* 入口の2つのボタン */
+.door {
+  flex-direction: column;
+  gap: 4px;
+  min-height: 112px;
+  font-size: 28px;
+  padding: 12px 16px;
+}
+
+.doorSub {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  align-self: flex-start;
+  font-size: 18px;
+  min-height: 52px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.help {
+  color: var(--text-sub);
+  margin-top: 8px;
+}
+
+.error {
+  min-height: 1.6em;
+  margin: 8px 0;
+}
+
+.submit {
+  width: 100%;
+  min-height: 72px;
+  font-size: 26px;
+}
+
+.codeInput {
+  font-size: 32px;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+/* 番号の表示 */
+.issued {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.code {
+  font-size: clamp(40px, 13vw, 56px);
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  background: var(--primary-soft);
+  border: 3px solid var(--primary);
+  border-radius: 16px;
+  padding: 12px 0;
+}
+
+.notes {
+  padding-left: 1.2em;
+  line-height: 1.8;
+}
+
+.gap {
+  height: 20px;
+}
+
+.show {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.show input {
+  width: 24px;
+  height: 24px;
+}

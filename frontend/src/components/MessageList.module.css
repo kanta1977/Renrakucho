@@ -1,0 +1,96 @@
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg);
+  overscroll-behavior: contain;
+}
+
+.inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 14px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.older {
+  align-self: center;
+  font-size: 18px;
+  min-height: 52px;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-sub);
+  margin-top: 15vh;
+  line-height: 1.8;
+}
+
+.date {
+  align-self: center;
+  background: #e6e1d6;
+  border-radius: 999px;
+  padding: 2px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.item {
+  max-width: min(85%, 600px);
+  display: flex;
+  flex-direction: column;
+}
+
+.mine {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.other {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 4px 4px;
+}
+
+.bubble {
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  padding: 12px 18px;
+  border-radius: 18px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border: 2px solid var(--border);
+  background: var(--surface);
+}
+
+.mine .bubble {
+  background: var(--mine);
+  border-color: #8fc96d;
+}
+
+.time {
+  font-size: 16px;
+  color: var(--text-sub);
+  margin: 4px 6px 0;
+}
+
+.mention {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--notice);
+  margin: 0 4px 4px;
+}
+
+/* 自分宛ての書き込み */
+.toMe .bubble {
+  border-color: var(--notice);
+  border-width: 3px;
+  background: var(--notice-soft);
+}
